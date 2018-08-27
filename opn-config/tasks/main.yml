@@ -1,5 +1,5 @@
 ---
-# Write config file to OPNSense firewall
+# Overwrite config and reload needed services
 - name: Write config
   copy:
     src: config.xml
@@ -8,3 +8,9 @@
     group: wheel
     mode: 0644
     backup: yes
+
+- name: Reload services and webgui
+  command: "{{ item }}"
+  with_items:
+      - configctl service reload all
+      - configctl webgui restart
