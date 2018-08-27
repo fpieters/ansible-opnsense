@@ -1,0 +1,7 @@
+---
+# Test template
+- name: Run command to test template
+  command: "{{ item }}"
+  with_items:
+      - configctl template reload {{template_sample}}
+      - configctl template cleanup {{template_sample}}

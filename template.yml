@@ -1,0 +1,8 @@
+---
+- name: Teste template functionality
+  hosts: firewall
+  remote_user: root
+  gather_facts: no
+  become: yes
+  roles:
+    - opn-template
