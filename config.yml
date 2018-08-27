@@ -1,0 +1,8 @@
+---
+- name: Copy config to opnsense firewall
+  hosts: firewall
+  remote_user: root
+  gather_facts: no
+  become: yes
+  roles:
+    - opn-config

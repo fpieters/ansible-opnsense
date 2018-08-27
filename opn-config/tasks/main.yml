@@ -1,5 +1,5 @@
 ---
-# tasks file for ansible-opnsense
+# Write config file to OPNSense firewall
 - name: Write config
   copy:
     src: config.xml
