@@ -3,7 +3,7 @@
 - name: Write sample
   copy:
     src: sample2.txt
-    dest: /usr/local/opnsense/service/templates/OPNsense/Sample/sample2.txt
+    dest: "{{template_dir}}/{{template_sample}}.txt"
     owner: root
     group: wheel
     mode: 0644
@@ -12,5 +12,5 @@
 - name: Run command to test template
   command: "{{ item }}"
   with_items:
-      - configctl template reload {{template_sample}}
-      - configctl template cleanup {{template_sample}}
+      - configctl template reload OPNsense/{{template_sample}}
+      - configctl template cleanup OPNsense/{{template_sample}}
