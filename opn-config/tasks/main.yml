@@ -8,9 +8,11 @@
     group: wheel
     mode: 0644
     backup: yes
+  register: config
 
 - name: Reload services and webgui
   command: "{{ item }}"
   with_items:
       - configctl service reload all
       - configctl webgui restart
+  when: config.changed
