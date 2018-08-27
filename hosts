@@ -1,0 +1,8 @@
+[all:vars]
+ansible_user=root
+ansible_ssh_pass=opnsense
+ansible_become_method=sudo
+ansible_python_interpreter='/usr/bin/env python2.7'
+
+[firewall]
+opnsense_1 ansible_host=127.0.0.1 ansible_port=2222

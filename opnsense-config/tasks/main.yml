@@ -1,0 +1,10 @@
+---
+# tasks file for ansible-opnsense
+- name: Write config
+  copy:
+    src: config.xml
+    dest: /conf/config.xml
+    owner: root
+    group: wheel
+    mode: 0644
+    backup: yes
