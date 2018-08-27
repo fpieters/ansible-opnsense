@@ -1,5 +1,14 @@
 ---
 # Test template
+- name: Write sample
+  copy:
+    src: sample2.txt
+    dest: /usr/local/opnsense/service/templates/OPNsense/Sample/sample2.txt
+    owner: root
+    group: wheel
+    mode: 0644
+    backup: yes
+
 - name: Run command to test template
   command: "{{ item }}"
   with_items:
