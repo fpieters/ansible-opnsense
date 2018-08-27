@@ -1,7 +1,18 @@
 # ansible-opnsense
 Ansible playbooks to automate OPNSense installs
 
-# Ansible
+# Prepare FreeBSD for Ansible:
+
+```
+echo 'sshd_enable="YES"' >> /etc/rc.conf
+service sshd start
+pkg install sudo
+echo '%wheel ALL=(ALL) ALL' >/usr/local/etc/sudoers.d/allow-wheel-user-login
+pkg install python27
+```
+
+# Ansible:
 - Clone this repo and run the playbook:
+```
 ansible-playbook config.yml -i hosts
 ```
