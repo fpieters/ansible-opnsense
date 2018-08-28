@@ -12,7 +12,9 @@ pkg install python27
 ```
 
 # Ansible:
-- Clone this repo and run the playbook:
+- Clone this repo and run the playbook(s):
 ```
+ansible-playbook api.yml -i hosts --ask-vault-pass
 ansible-playbook config.yml -i hosts
+ansible-playbook template.yml -i hosts
 ```

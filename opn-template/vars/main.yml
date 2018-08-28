@@ -1,4 +1,0 @@
----
-# vars file for opn-config
-template_dir: /usr/local/opnsense/service/templates/OPNsense
-template_sample: Sample/sample2
