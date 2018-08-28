@@ -1,7 +1,7 @@
 ---
 - name: Test basic auth for Uri module
   uri:
-    url: https://127.0.0.1:10443/api/diagnostics/firewall/log
+    url: https://{{ansible_host}}:{{api_port}}/api/{{api_url}}
     method: GET
     url_username: "{{api_key}}"
     url_password: "{{api_secret}}"
